@@ -1,0 +1,81 @@
+*{
+	margin:0;
+	padding:0;
+	background-color: #ccc;
+}
+body,ul,li,p,dl,dt,dd,ol,h1,h2,h3,h4,h5,h6{
+	margin:0;
+	padding:0;
+}
+ul,ol{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:none;
+}
+#album{
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+#book{
+	margin: 0 auto;
+	width: 80%;
+	height: auto;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-ms-transform:translate(50%,50%);
+}
+h2{
+	color: #555;
+	margin: 5px;
+}
+span{
+	margin: 0 auto;
+	width: 100%;
+}
+#bpic{
+	width: 100%;
+	height: auto;
+	box-shadow: 5px 5px 5px #555;
+}
+#catalog{
+	position: absolute;
+	padding-left: 0%;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	top: 97%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-ms-transform:translate(50%,50%);
+	z-index: 9;
+}
+ul{	
+	width: 7.143%;
+	height: 7.143%;
+	float: left;
+}
+ul img{
+	width: 100%;
+	height: 100%;
+	box-shadow: 5px 5px 5px #555;
+}
+.co{
+	margin-top: 5px;
+	background-color: none;
+	position: absolute;
+	color: #555;
+	text-align: right;
+	top: 100%;
+	right: 0;
+}
