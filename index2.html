@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 	<head>
@@ -51,7 +52,8 @@ span{
 }
 #catalog{
 	position: absolute;
-	padding-left: 16%;
+	padding-left: 2%;
+	margin-left: 0;
 	width: 100%;
 	float: left;
 	top: 97%;
@@ -63,8 +65,8 @@ span{
 
 }
 ul{	
-	width: 6%;
-	height: 6%;
+	width: 7%;
+	height: 7%;
 	float: left;
 }
 ul img{
@@ -102,23 +104,33 @@ ul img{
 	</body>
 	<script type="text/javascript">
 window.onload=function(){
-
-	$("#bpic").attr('src','images/01.jpg')
-
+	$("#bpic").attr('src','images/01.jpg');
 	$('.sta').mouseenter(function(){
-		$(this).css({ opacity : 1 })
-		$('.sta').not($(this)).css({ opacity : 0.4 })
+		$(this).fadeTo(250,1);
+		$('.sta').not($(this)).fadeTo(250,0.4)
 	})
-
-	$('.sta').css({ opacity : 0.4 })
-	$('ul').first().css({ opacity : 1 })
-
-$('.sta').find('img').mouseover(function(){
-    bgimg=$(this)[0].src;
-	$('#bpic').fadeTo(250,0,function(){
-    	$(this).attr("src",bgimg).fadeTo(250,1)
+	$('.sta').fadeTo(250,0.4)
+	$('ul').first().fadeTo(250,1)
+	$('.sta').find('img').mouseenter(function(){
+	    bgimg=$(this)[0].src;
+		$('#bpic').fadeTo(250,0,function(){
+	    	$(this).attr("src",bgimg).fadeTo(250,1);
+		});
 	})
-})
+	$('.sta').find('img').click(function(){
+	    bgimg=$(this)[0].src;
+		$('#bpic').fadeTo(250,0,function(){
+	    	$(this).attr("src",bgimg).fadeTo(250,1);
+		});
+	})
+	$('span').find('img').click(function(){
+		bgimg=$(this)[0].src;
+		$('.sta').not($(this)).fadeTo(2500,0.4)
+		$('#bpic').fadeTo(2500,0,function(){
+			$('#bpic').attr('src','images/01.jpg').fadeTo(1000,1);
+			$('ul').first('ima').fadeTo(1000,1)
+		});
+	})
 }
 	</script>
 </html>
