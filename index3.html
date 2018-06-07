@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="UTF-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>公司画册</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="jQuery/jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		<div id="album">
+			<div id="book">
+				<h2><b>图片展示</b></h2><hr>
+				<span>
+					<img id="bpic" src="">
+				</span>
+				<div id="catalog" class="st1">				
+					<ul class="sta"><img src="images/01.jpg"></ul>
+					<ul class="sta"><img src="images/02.jpg"></ul>
+					<ul class="sta"><img src="images/03.jpg"></ul>
+					<ul class="sta"><img src="images/04.jpg"></ul>
+					<ul class="sta"><img src="images/05.jpg"></ul>
+					<ul class="sta"><img src="images/06.jpg"></ul>
+					<ul class="sta"><img src="images/07.jpg"></ul>
+					<ul class="sta"><img src="images/08.jpg"></ul>
+					<ul class="sta"><img src="images/09.jpg"></ul>
+					<ul class="sta"><img src="images/10.jpg"></ul>
+					<ul class="sta"><img src="images/11.jpg"></ul>
+					<ul class="sta"><img src="images/12.jpg"></ul>
+					<ul class="sta"><img src="images/13.jpg"></ul>
+					<ul class="sta"><img src="images/14.jpg"></ul>
+				</div>
+				<div class="co">
+					<p>Guangdong SANYL Co. Ltd</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+window.onload=function(){
+
+	$("#bpic").attr('src','images/01.jpg');
+
+	$('.sta').mouseenter(function(){
+		$(this).fadeTo(250,1);
+		$('.sta').not($(this)).fadeTo(250,0.4)
+	})
+
+	$('.sta').fadeTo(250,0.4)
+
+	$('ul').first().fadeTo(250,1)
+
+	$('.sta').find('img').mouseenter(function(){
+	    bgimg=$(this)[0].src;
+		$('#bpic').fadeTo(250,0,function(){
+	    	$(this).attr("src",bgimg).fadeTo(250,1);
+		});
+	})
+
+	$('.sta').find('img').click(function(){
+	    bgimg=$(this)[0].src;
+		$('#bpic').fadeTo(250,0,function(){
+	    	$(this).attr("src",bgimg).fadeTo(250,1);
+		});
+	})
+
+	$('span').find('img').click(function(){
+		bgimg=$(this)[0].src;
+		$('.sta').not($(this)).fadeTo(2500,0.4)
+		$('#bpic').fadeTo(2500,0,function(){
+			$('#bpic').attr('src','images/01.jpg').fadeTo(1000,1);
+			$('ul').first('ima').fadeTo(1000,1)
+		});
+	})
+}
+	</script>
+</html>
